@@ -9,6 +9,11 @@
 @import "base/_variable";
 
 // Origin style
-@import "object/coponent";
-@import "object/utility";
-@import "object/project";
+// @import "object/coponent";
+// @import "object/utility";
+// @import "object/project";
+
+
+.hoge {
+  @include position(absolute, 50%);
+}
