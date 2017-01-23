@@ -2,6 +2,9 @@ import webpack from 'webpack'
 import path from 'path'
 import ExtractTextPlugin from 'extract-text-webpack-plugin'
 
+const bourbonPath = require('bourbon').includePaths
+const neatPath = require('bourbon-neat').includePaths
+
 module.exports = [{
   entry: path.join(__dirname, 'source/javascript/script.js'),
   output: {
@@ -48,4 +51,8 @@ module.exports = [{
   plugins: [
         new ExtractTextPlugin("style.css")
     ],
+  // sass-loaderのオプションでbourbonとneatのpathを渡す
+  sassLoader: {
+    includePaths: bourbonPath.concat(neatPath),
+  }
 }];

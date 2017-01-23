@@ -2,7 +2,7 @@
 
 // Tools
 @import "bourbon";
-@import "neat/neat";
+@import "neat";
 
 // Base
 @import "foundatin/_normalize";
@@ -12,8 +12,3 @@
 // @import "object/coponent";
 // @import "object/utility";
 // @import "object/project";
-
-
-.hoge {
-  @include position(absolute, 50%);
-}
