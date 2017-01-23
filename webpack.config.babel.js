@@ -1,14 +1,15 @@
 import webpack from 'webpack'
 import path from 'path'
 import ExtractTextPlugin from 'extract-text-webpack-plugin'
+import config from './config'
 
 const bourbonPath = require('bourbon').includePaths
 const neatPath = require('bourbon-neat').includePaths
 
 module.exports = [{
-  entry: path.join(__dirname, 'source/javascript/script.js'),
+  entry: path.join(__dirname, config.source.javascript + '/script.js'),
   output: {
-    path: path.join(__dirname, 'assets/javascript/'),
+    path: path.join(__dirname, config.source.build + '/'),
     filename: 'script.js'
   },
   module: {
@@ -34,10 +35,10 @@ module.exports = [{
   }
 }, {
   entry: [
-    path.join(__dirname, 'source/stylesheet/style.scss'),
+    path.join(__dirname, config.source.stylesheet + '/style.scss'),
   ],
   output: {
-    path: path.join(__dirname, 'assets/stylesheet/'),
+    path: path.join(__dirname, config.source.stylesheet + '/'),
     filename: 'style.css'
   },
   module: {
