@@ -5,3 +5,5 @@ class X {
 }
 let x = new X();
 x.foo();
+
+const hoge = 'hoge'

@@ -9,7 +9,7 @@ const neatPath = require('bourbon-neat').includePaths
 module.exports = [{
   entry: path.join(__dirname, config.source.javascript + '/script.js'),
   output: {
-    path: path.join(__dirname, config.source.build + '/'),
+    path: path.join(__dirname, config.build.javascript + '/'),
     filename: 'script.js'
   },
   module: {

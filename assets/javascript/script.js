@@ -68,5 +68,7 @@
 	var x = new X();
 	x.foo();
 
+	var hoge = 'hoge';
+
 /***/ }
 /******/ ]);
