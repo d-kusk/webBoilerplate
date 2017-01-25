@@ -1,10 +1,22 @@
 module.exports = {
   source: {
-    stylesheet: 'source/stylesheet',
-    javascript: 'source/javascript'
+    stylesheet: {
+      path: 'source/stylesheet/',
+      fileName: 'style.scss'
+    },
+    javascript: {
+      path: 'source/javascript/',
+      fileName: 'script.js'
+    }
   },
   build: {
-    stylesheet: 'assets/stylesheet',
-    javascript: 'assets/javascript'
+    stylesheet: {
+      path: 'assets/stylesheet/',
+      fileName: 'style.css'
+    },
+    javascript: {
+      path: 'assets/javascript/',
+      fileName: 'script.js'
+    }
   }
 }

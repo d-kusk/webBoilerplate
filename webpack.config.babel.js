@@ -7,10 +7,10 @@ const bourbonPath = require('bourbon').includePaths
 const neatPath = require('bourbon-neat').includePaths
 
 module.exports = [{
-  entry: path.join(__dirname, config.source.javascript + '/script.js'),
+  entry: path.join(__dirname, config.source.javascript.path + config.source.javascript.fileName),
   output: {
-    path: path.join(__dirname, config.build.javascript + '/'),
-    filename: 'script.js'
+    path: path.join(__dirname, config.build.javascript.path),
+    filename: config.build.javascript.fileName
   },
   module: {
     loaders: [
@@ -34,12 +34,10 @@ module.exports = [{
     jquery: 'window.jQuery'
   }
 }, {
-  entry: [
-    path.join(__dirname, config.source.stylesheet + '/style.scss'),
-  ],
+  entry: path.join(__dirname, config.source.stylesheet.path + config.source.stylesheet.fileName),
   output: {
-    path: path.join(__dirname, config.source.stylesheet + '/'),
-    filename: 'style.css'
+    path: path.join(__dirname, config.build.stylesheet.path),
+    filename: config.build.stylesheet.fileName
   },
   module: {
     loaders: [
@@ -50,7 +48,7 @@ module.exports = [{
     ]
   },
   plugins: [
-        new ExtractTextPlugin("style.css")
+        new ExtractTextPlugin(config.build.stylesheet.fileName)
     ],
   // sass-loaderのオプションでbourbonとneatのpathを渡す
   sassLoader: {
