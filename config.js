@@ -1,11 +1,11 @@
 module.exports = {
   source: {
     stylesheet: {
-      path: 'source/stylesheet/',
+      path: '/source/stylesheet/',
       fileName: 'style.css'
     },
     javascript: {
-      path: 'source/javascript/',
+      path: '/source/javascript/',
       fileName: 'script.js'
     }
   },

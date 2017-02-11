@@ -2,10 +2,10 @@
 
 
 /* Base */
-@import "foundatin/_normalize.css";
-/*@import "foundatin/variable";*/
+@import "foundatin/normalize";
+@import "foundatin/variable";
 
 /*Origin style*/
 /*@import "object/coponent";
-@import "object/utility";
-@import "object/project";*/
+@import "object/utility";*/
+@import "object/project/**/*";

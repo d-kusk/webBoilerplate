@@ -1217,7 +1217,7 @@ glob-parent@^2.0.0:
   dependencies:
     is-glob "^2.0.0"
 
-glob@^5.0.3:
+glob@^5.0.13, glob@^5.0.3:
   version "5.0.15"
   resolved "https://registry.yarnpkg.com/glob/-/glob-5.0.15.tgz#1bc936b9e02f4a603fcc222ecf7633d30b8b93b1"
   dependencies:
@@ -1333,6 +1333,13 @@ icss-replace-symbols@^1.0.2:
 ieee754@^1.1.4:
   version "1.1.8"
   resolved "https://registry.yarnpkg.com/ieee754/-/ieee754-1.1.8.tgz#be33d40ac10ef1926701f6f08a2d86fbfd1ad3e4"
+
+import-glob-loader@^1.1.0:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/import-glob-loader/-/import-glob-loader-1.1.0.tgz#98d84c0f661c8ba9f821d9ddb7c6b6dc8e97eca2"
+  dependencies:
+    glob "^5.0.13"
+    loader-utils "^0.2.10"
 
 indexes-of@^1.0.1:
   version "1.0.1"
@@ -1549,7 +1556,7 @@ lazy-cache@^1.0.3:
   version "1.0.4"
   resolved "https://registry.yarnpkg.com/lazy-cache/-/lazy-cache-1.0.4.tgz#a1d78fc3a50474cb80845d3b3b6e1da49a446e8e"
 
-loader-utils@^0.2.11, loader-utils@^0.2.16, loader-utils@^0.2.3, loader-utils@^0.2.7, loader-utils@~0.2.2:
+loader-utils@^0.2.10, loader-utils@^0.2.11, loader-utils@^0.2.16, loader-utils@^0.2.3, loader-utils@^0.2.7, loader-utils@~0.2.2:
   version "0.2.16"
   resolved "https://registry.yarnpkg.com/loader-utils/-/loader-utils-0.2.16.tgz#f08632066ed8282835dff88dfb52704765adee6d"
   dependencies:

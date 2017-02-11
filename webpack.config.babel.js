@@ -2,6 +2,7 @@ import webpack from 'webpack'
 import path from 'path'
 import ExtractTextPlugin from 'extract-text-webpack-plugin'
 import precss from 'precss'
+import importGlobLoader from 'import-glob-loader'
 import config from './config'
 
 module.exports = [{
@@ -37,11 +38,18 @@ module.exports = [{
     path: path.join(__dirname, config.build.stylesheet.path),
     filename: config.build.stylesheet.fileName
   },
+  resolve: {
+    extensions: ['', '.css']
+  },
   module: {
+    preloaders: [{
+      test: /\.css$/,
+      loader: 'importGlobLoader'
+    }],
     loaders: [
       {
         test: /\.css$/,
-        loader: ExtractTextPlugin.extract('style', 'css', 'postcss')
+        loader: ExtractTextPlugin.extract('style', 'css!postcss!import-glob-loader')
       }
     ]
   },
