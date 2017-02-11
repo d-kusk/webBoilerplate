@@ -49,14 +49,11 @@ module.exports = [{
     loaders: [
       {
         test: /\.css$/,
-        loader: ExtractTextPlugin.extract('style', 'css!postcss!import-glob-loader')
+        loader: ExtractTextPlugin.extract('style', 'css!postcss!import-glob')
       }
     ]
   },
   plugins: [
     new ExtractTextPlugin(config.build.stylesheet.fileName)
-  ],
-  postcss: function() {
-    return [precss]
-  }
+  ]
 }];

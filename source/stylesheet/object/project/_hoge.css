@@ -1,1 +1,4 @@
-.hoge{width: 10%;}
+.hoge {
+  display: flex;
+  width: 10%;
+}

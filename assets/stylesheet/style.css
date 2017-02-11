@@ -454,5 +454,8 @@ template{
 /*@import "object/coponent";
 @import "object/utility";*/
 .hoge{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
     width: 10%
 }
