@@ -172,4 +172,4 @@
 
 /*Origin style*/
 /*@import "object/coponent";
-@import "object/utility";*/.hoge{display:-webkit-box;display:-ms-flexbox;display:flex}.hoge,.hoge__fuga{width:10%}@media (min-width:600px){.facet_sidebar{display:none;width:100px}}
+@import "object/utility";*/.hoge{display:-webkit-box;display:-ms-flexbox;display:flex;width:20%}.hoge__fuga{width:10%}@media (min-width:600px){.facet_sidebar{display:none;width:100px}}
