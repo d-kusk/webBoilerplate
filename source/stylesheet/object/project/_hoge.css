@@ -1,0 +1,16 @@
+$sample-size: 20%;
+.hoge {
+  display: flex;
+  width: $sample-size;
+
+  &__fuga {
+    width: 10%;
+  }
+}
+
+@media (width >= 600px) {
+  .facet_sidebar {
+    display: none;
+    width: 100px;
+  }
+}

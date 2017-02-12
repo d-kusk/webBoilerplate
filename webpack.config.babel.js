@@ -1,10 +1,9 @@
 import webpack from 'webpack'
 import path from 'path'
 import ExtractTextPlugin from 'extract-text-webpack-plugin'
+import precss from 'precss'
+import importGlobLoader from 'import-glob-loader'
 import config from './config'
-
-const bourbonPath = require('bourbon').includePaths
-const neatPath = require('bourbon-neat').includePaths
 
 module.exports = [{
   entry: path.join(__dirname, config.source.javascript.path + config.source.javascript.fileName),
@@ -39,19 +38,22 @@ module.exports = [{
     path: path.join(__dirname, config.build.stylesheet.path),
     filename: config.build.stylesheet.fileName
   },
+  resolve: {
+    extensions: ['', '.css']
+  },
   module: {
+    preloaders: [{
+      test: /\.css$/,
+      loader: 'importGlobLoader'
+    }],
     loaders: [
       {
-        test: /\.scss$/,
-        loader: ExtractTextPlugin.extract("style-loader", "css-loader!sass-loader")
+        test: /\.css$/,
+        loader: ExtractTextPlugin.extract('style', 'css!postcss!import-glob')
       }
     ]
   },
   plugins: [
-        new ExtractTextPlugin(config.build.stylesheet.fileName)
-    ],
-  // sass-loaderのオプションでbourbonとneatのpathを渡す
-  sassLoader: {
-    includePaths: bourbonPath.concat(neatPath),
-  }
+    new ExtractTextPlugin(config.build.stylesheet.fileName)
+  ]
 }];

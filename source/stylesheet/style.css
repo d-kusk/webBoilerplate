@@ -1,0 +1,11 @@
+@charset "UTF-8";
+
+
+/* Base */
+@import "foundatin/normalize";
+@import "foundatin/variable";
+
+/*Origin style*/
+/*@import "object/coponent";
+@import "object/utility";*/
+@import "object/project/**/*";
