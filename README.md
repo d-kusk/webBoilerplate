@@ -7,13 +7,20 @@ Development Environment and boilerplate for Web page.
 - Babel
     * ES2015
 - Sass
-    * bourbon
-    * Neat
+    * precss
+    * Autoprefixer
+        * last 2 versions', '> 2%'
+    * postcss-media-minmax
+    * cssnano
 
 ## Usage
 
 ```
-$ npm i
+$ yarn install
 
-$ npm run watch
+$ yarn run watch
 ```
+
+## LICENSE
+
+Released under the MIT License: http://www.opensource.org/licenses/MIT
