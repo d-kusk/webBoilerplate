@@ -27,7 +27,8 @@ module.exports = [{
     new webpack.ProvidePlugin({
       $: 'jquery',
       jQuery: 'jquery'
-    })
+    }),
+    new webpack.optimize.UglifyJsPlugin()
   ],
   externals: {
     jquery: 'window.jQuery'
@@ -42,10 +43,6 @@ module.exports = [{
     extensions: ['', '.css']
   },
   module: {
-    preloaders: [{
-      test: /\.css$/,
-      loader: 'importGlobLoader'
-    }],
     loaders: [
       {
         test: /\.css$/,
