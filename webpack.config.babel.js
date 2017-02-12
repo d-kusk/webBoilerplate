@@ -42,10 +42,6 @@ module.exports = [{
     extensions: ['', '.css']
   },
   module: {
-    preloaders: [{
-      test: /\.css$/,
-      loader: 'importGlobLoader'
-    }],
     loaders: [
       {
         test: /\.css$/,
